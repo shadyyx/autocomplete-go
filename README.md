@@ -27,6 +27,10 @@ If you have the [`go-get`](https://atom.io/packages/go-get) package installed, t
 * Run `gocode set autobuild true` to have `gocode` attempt to run `go install ./...` for you
 * Configure a package (like [build](https://atom.io/packages/build)) to run your build command on every save
 
+> After Go upgrade to new version autocomplete always inserts `PANIC`.
+
+To fix this run the `golang:update-tools` command (<kbd>ctrl</kbd> + <kbd>alt</kbd> + <kbd>shift</kbd> + <kbd>g</kbd>  <kbd>u</kbd>). This will install/update all the missing/outdated Go tools. Also make sure you have the latest Atom version and all packages are up-to-date. After restart the code completion should work as before.
+
 ### Configuration
 
 * `scopeBlacklist`: Suggestions will not be shown when the cursor is inside the specified comma-delimited scope(s) (default: `.source.go .comment`)
